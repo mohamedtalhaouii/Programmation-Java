@@ -28,13 +28,14 @@
 
 ---
 
+
 ## **1. Types de Données**
 | **Type**       | **Taille**       | **Description**                          |
 |----------------|------------------|------------------------------------------|
 | `byte`         | 1 octet          | Entier signé (-128 à 127).               |
 | `short`        | 2 octets         | Entier signé (-32 768 à 32 767).         |
-| `int`          | 4 octets         | Entier signé (-2^31 à 2^31-1).           |
-| `long`         | 8 octets         | Entier signé (-2^63 à 2^63-1).           |
+| `int`          | 4 octets         | Entier signé $(-2^{31} \text{ à } 2^{31}-1)$.           |
+| `long`         | 8 octets         | Entier signé $(-2^{63} \text{ à } 2^{63}-1)$.           |
 | `float`        | 4 octets         | Nombre flottant (simple précision).      |
 | `double`       | 8 octets         | Nombre flottant (double précision).      |
 | `char`         | 2 octets         | Caractère Unicode (0 à 65 535).          |
