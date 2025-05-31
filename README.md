@@ -78,8 +78,8 @@ public class NomDuProgramme {      // Le nom de la classe DOIT correspondre au n
 |----------------|-----------------------|---------------------------------------------|
 | byte        | 1                     | Entier signé (-128 à 127).                  |
 | short       | 2                     | Entier signé (-32,768 à 32,767).            |
-| int         | 4                     | Entier signé (-2^31 à 2^31-1).              |
-| long        | 8                     | Entier long signé (-2^63 à 2^63-1).         |
+| int         | 4                     | Entier signé ($-2^{31}, 2^{31}-1$).              |
+| long        | 8                     | Entier long signé ($-2^{63}, 2^{63}-1$).         |
 | float       | 4                     | Nombre flottant simple précision.           |
 | double      | 8                     | Nombre flottant double précision.           |
 | char        | 2                     | Caractère Unicode (0 à 65,535).             |
