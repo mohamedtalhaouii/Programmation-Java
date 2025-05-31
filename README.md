@@ -25,6 +25,7 @@
 - **[Collections](#11-collections)**
 - **[Exceptions](#12-exceptions)**
 - **[Fichiers](#13-fichiers)**
+- **[Bibliothèques Utiles](#14-bibliothèques-utiles)**
 
 ---
 
@@ -564,7 +565,7 @@ Files.writeString(Path.of("fichier.txt"), "Contenu");
 
 ---
 
-## **Bibliothèques Utiles**
+## **14. Bibliothèques Utiles**
 ```java
 import java.util.*;       // Collections, Scanner
 import java.io.*;         // Fichiers
