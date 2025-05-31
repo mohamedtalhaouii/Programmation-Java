@@ -1,4 +1,7 @@
 ## **Plan du Contenu :**
+- **[Pourquoi Java ?](#pourquoi-java-)**
+- **[Syntaxe de Base](#syntaxe-de-base)**
+- **[Comparaison C++/Java](#comparaison-cjava)**
 - **[Types de Données](#1-types-de-données)**
 - **[Déclaration de Variables](#2-déclaration-de-variables)**
 - **[Entrée/Sortie](#3-entréesortie)**
@@ -27,6 +30,47 @@
 
 <h3 align="center"><a href="https://github.com/mohamedtalhaouii/Programmation-Cpp" target="_blank">Lien de Language C++</a></h3>
 
+
+---
+
+## **Pourquoi Java ?**
+| **Caractéristique** | **Avantage**                                  |
+|---------------------|---------------------------------------------|
+| **Garbage Collector** | Pas de `delete` → Mémoire gérée automatiquement |
+| **Multiplateforme**   | Code exécuté sur JVM (Windows/Linux/Mac)    |
+| **Orienté Objet**    | Tout est objet (sauf les primitifs)         |
+| **Écosystème riche** | Android, Spring, Hadoop, etc.               |
+
+---
+
+## **Syntaxe de Base**
+- **Structure d’un Programme Java**
+```java
+// Fichier : NomDuProgramme.java  
+public class NomDuProgramme {      // Le nom de la classe DOIT correspondre au nom du fichier  
+    public static void main(String[] args) {  // Méthode principale (point d'entrée)  
+        // Votre code ici  
+    }  
+}  
+```
+
+- **Éléments Clés**
+    - **Classes** : Chaque fichier `.java` contient une classe publique.
+    - **`main()`** : Méthode obligatoire pour exécuter le programme.
+    - **Points-virgules** : Requis après chaque instruction.
+    - **Typage strict** : `int x = "texte"` → Erreur de compilation.
+
+---
+
+## **Comparaison C++/Java**
+| **Concept**       | **C++**                          | **Java**                          |
+|------------------|----------------------------------|----------------------------------|
+| **Compilation**  | → Binaire natif                 | → Bytecode (JVM)                |
+| **Pointeurs**    | `int* p = &x;`                  | Références uniquement (`Objet o = new Objet()`) |
+| **Héritage**     | Multiple (`class A : public B, C`) | Simple (`extends`), interfaces pour multi-héritage |
+| **Gestion Mémoire** | `new`/`delete`               | Garbage Collector (GC)          |
+
+
 ---
 
 ## **1. Types de Données**
@@ -45,24 +89,60 @@
 
 ## **2. Déclaration de Variables**
 ```java
-Type nomVar = valeur;          // Variable
-final Type NOM_CONST = valeur; // Constante
+// Primitive (stockée dans la pile)
+int x = 10;  
+
+// Objet (stocké dans le tas)
+String texte = new String("Hello");  
+
+// Constante (final = const en C++)
+final double PI = 3.14159;  
 ```
 
 ---
 
 ## **3. Entrée/Sortie**
-```java
-import java.util.Scanner;
 
-Scanner scanner = new Scanner(System.in);
-System.out.print("Message");   // Affichage sans saut de ligne
-System.out.println("Message"); // Affichage avec saut de ligne
-String input = scanner.next(); // Lecture d'une chaîne
-int num = scanner.nextInt();   // Lecture d'un entier
+- **Lecture :**
+```java
+import java.util.Scanner;  // Nécessaire pour les opérations de lecture
+
+public class Main {
+    public static void main(String[] args) {
+        // Création d'un objet Scanner
+        Scanner scanner = new Scanner(System.in);
+        
+        // Lecture des différents types de données
+        System.out.print("Entrez votre nom complet : ");
+        String nomComplet = scanner.nextLine();  // Lit toute la ligne
+        
+        System.out.print("Entrez votre âge : ");
+        int age = scanner.nextInt();            // Lit un entier
+        
+        System.out.print("Entrez votre taille (en m) : ");
+        double taille = scanner.nextDouble();   // Lit un nombre décimal
+        
+        // Nettoyage du buffer
+        scanner.nextLine();
+        
+        // Fermeture du scanner (bonne pratique)
+        scanner.close();
+    }
+}
 ```
 
----
+- **Écriture :**
+```java
+// Affichage simple
+System.out.println("Bonjour " + nomComplet + "!");  // println = saut de ligne
+
+// Formatage avancé avec printf()
+System.out.printf("Âge : %d ans | Taille : %.2f m%n", age, taille);
+
+// Formatage avec String.format()
+String message = String.format("Vous vous appelez %s et vous avez %d ans", nomComplet, age);
+System.out.println(message);
+```
 
 ## **4. Opérateurs**
 
