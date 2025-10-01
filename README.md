@@ -29,7 +29,7 @@
 
 ---
 
-<h3 align="center"><a href="https://github.com/mohamedtalhaouii/Programmation-Cpp" target="_blank">Lien de Language C++</a></h3>
+<h3 align="center"><a href="https://github.com/mohamedtalhaouii/Programmation-Cpp" target="_blank">Lien de Programmation en Language C++</a></h3>
 
 
 ---
